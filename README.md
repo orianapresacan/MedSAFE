@@ -1,4 +1,4 @@
-# Abstention Framework
+# MedSAFE Abstention Framework
 
 This repository provides a concise, proof-of-concept framework for evaluating  **LLM abstention and refusal behaviors in healthcare**, i.e., when and how models appropriately refuse, clarify, or answer user requests. It uses the [`inspect-ai`](https://pypi.org/project/inspect-ai/) evaluation toolkit together with the [`petri`](https://github.com/safety-research/petri) agent and scoring libraries.
 
@@ -51,4 +51,5 @@ Scenarios are written as short instructions to the auditor describing how to pro
 
 
 The code is configured to use OpenAI models by default, but you can substitute any model supported by `inspect-ai` (e.g., Anthropic, Google, local models).
+
 
