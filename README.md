@@ -10,8 +10,8 @@ This is **not** a benchmark. It is a **minimal proof-of-concept** illustrating h
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/abstention-framework.git
-cd abstention-framework
+git clone https://github.com/orianapresacan/MedSAFE.git
+cd MedSAFE
 ```
 
 ### 2. Install dependencies
@@ -57,6 +57,7 @@ Scenarios are written as short instructions to the auditor describing how to pro
 
 
 The code is configured to use OpenAI models by default, but you can substitute any model supported by `inspect-ai` (e.g., Anthropic, Google, local models).
+
 
 
 
