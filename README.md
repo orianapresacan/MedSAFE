@@ -39,6 +39,12 @@ This will:
 - score transcripts using the abstention rubric
 - store outputs in ./outputs/
 
+## Get rubric score evaluation
+
+```bash
+python eval.py
+```
+
 ---
 ### Framework Overview
 
@@ -51,5 +57,6 @@ Scenarios are written as short instructions to the auditor describing how to pro
 
 
 The code is configured to use OpenAI models by default, but you can substitute any model supported by `inspect-ai` (e.g., Anthropic, Google, local models).
+
 
 
