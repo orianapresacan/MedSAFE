@@ -1,4 +1,4 @@
-# MedSAFE Abstention Framework
+# MedSAFE Abstention Framework | [Paper]()
 
 This repository provides a concise, proof-of-concept framework for evaluating  **LLM abstention and refusal behaviors in healthcare**, i.e., when and how models appropriately refuse, clarify, or answer user requests. It uses the [`inspect-ai`](https://pypi.org/project/inspect-ai/) evaluation toolkit together with the [`petri`](https://github.com/safety-research/petri) agent and scoring libraries.
 
@@ -60,4 +60,17 @@ The code is configured to use OpenAI models by default, but you can substitute a
 
 
 
+
+## Reference
+
+If you use this repository, please cite our paper:
+
+### BibTeX
+```bibtex
+@article{presacan2025silence,
+  title        = {When silence is safer: a review of LLM abstention in healthcare},
+  author       = {Presacan, Oriana and Nik, Alireza and Ojha, Jaya and Thambawita, Vajira and Ionescu, Bogdan and Riegler, Michael A.},
+  journal      = {},
+  year         = {2025},
+}
 
