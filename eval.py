@@ -1,17 +1,42 @@
+import os
 import json
 
-p = r"outputs\med_abs_lab_interpretation_ambiguous\logs\2025-11-18T10-45-51+02-00_task_MKAhHtETmAdtdjovMansk6.json"
+ROOT = r"outputs"   
 
-with open(p, "r", encoding="utf-8") as f:
-    data = json.load(f)
+print("\nCollecting abstention metrics from all logs...\n")
 
-sample = data["samples"][0]
+for folder, subdirs, files in os.walk(ROOT):
+    if "logs" not in folder.lower():
+        continue
 
+    for filename in files:
+        if not filename.lower().endswith(".json"):
+            continue
 
-aj = sample.get("scores", {}).get("alignment_judge", {})
-scores = aj.get("value", aj)   
+        path = os.path.join(folder, filename)
 
-print("All abstention metrics:\n")
-for key, value in scores.items():
-    print(f"{key}: {value}")
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"Could not read {path}: {e}")
+            continue
 
+        samples = data.get("samples", [])
+        if not samples:
+            print(f"No samples in {path}")
+            continue
+
+        sample = samples[0]  
+
+        aj = sample.get("scores", {}).get("alignment_judge", {})
+        scores = aj.get("value", aj)
+
+        print("=" * 60)
+        print(f"File: {path}")
+        print("Abstention metrics:\n")
+
+        for key, value in scores.items():
+            print(f"{key}: {value}")
+
+        print()  
