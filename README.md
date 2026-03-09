@@ -2,7 +2,7 @@
 
 This repository provides an implementation of the MedSAFE evaluation pipeline described in the paper for assessing abstention behavior in medical LLMs.
 
- The framework runs offline by default using a deterministic simulator, ensuring fully reproducible results, and can optionally be configured to evaluate live LLM APIs.
+The framework runs offline by default using a deterministic simulator, enabling execution of the evaluation pipeline without requiring external API access. It can optionally be configured to evaluate live LLM APIs.
 
 ## Overview
 
@@ -37,8 +37,7 @@ pip install -r requirements.txt
 ## Running the Pipeline
 
 ### Deterministic mode (no API required)
-By default, the pipeline runs in **deterministic mode**, which requires no external API access. In this mode, a built-in rule-based simulator generates the dialogue turns, model responses, and rubric scores for each scenario.
-
+By default, the pipeline runs in **deterministic mode**, which requires no external API access. 
 
 ```bash
 python medsafe.py
